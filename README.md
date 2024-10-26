@@ -5,37 +5,8 @@
 ## Features
 - **Load and clean data**: Remove duplicates and missing values from CSV files.
 - **Environment management**: Securely handle credentials and API keys with `.env` files.
-- **Pre-commit hooks**: Automated code formatting and linting with `black`, `flake8`, and `isort`.
+- **Pre-commit hooks**: Automated code formatting and linting with `black`, `flake8`, and others.
 - **CI/CD with GitHub Actions**: Automated testing and code quality checks on every push or pull request.
-
-## Installation
-
-To install the package after building it locally:
-
-```bash
-pip install dist/blog_de_toolkit-0.1.0-py3-none-any.whl
-```
-
-## Usage
-
-### Python Usage Example
-
-Here’s a quick example of how to use the library to load and clean data:
-
-```python
-from de_toolkit.data_tool import load_and_clean_data
-
-df = load_and_clean_data("sample_data.csv")
-print(df.head())
-```
-
-### Running the Tool from the Command Line
-
-After installing the package, you can run the tool directly from the terminal to print the cleaned data and environment variables:
-
-```bash
-blog_de_toolkit
-```
 
 ## Development Setup
 
@@ -77,3 +48,44 @@ pre-commit install
 ```bash
 pre-commit run --all-files
 ```
+
+## Installation
+
+To build the package:
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+To install the package after building it locally:
+
+```bash
+pip install dist/blog_de_toolkit-0.1.0-py3-none-any.whl
+```
+
+## Usage
+
+### Python Usage Example
+
+Here’s a quick example of how to use the library to load and clean data:
+
+```python
+from de_toolkit.data_tool import load_and_clean_data
+
+df = load_and_clean_data("sample_data.csv")
+print(df.head())
+```
+
+### Running the Tool from the Command Line
+
+After installing the package, you can run the tool directly from the terminal to print the cleaned data and environment variables:
+
+```bash
+blog_de_toolkit
+```
+
+## Contributing
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and open a pull request. Please make sure your changes pass all tests and pre-commit hooks before submitting.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.

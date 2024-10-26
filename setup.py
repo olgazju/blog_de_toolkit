@@ -6,7 +6,7 @@ setup(
     description="A Python toolkit for data engineering tasks.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    author="Your Name",
+    author="Olga",
     packages=find_packages(),
     include_package_data=True,
     install_requires=["pandas", "python-dotenv"],
